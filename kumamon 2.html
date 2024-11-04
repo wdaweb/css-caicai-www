@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            background: rgb(215, 215, 215);
+
+        }
+
+        .face {
+            width: 300px;
+            height: 300px;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            ;
+        }
+
+        .ear {
+            width: 50px;
+            height: 50px;
+            background: rgb(0, 0, 0);
+            border-radius: 50%;
+            position: absolute;
+            top: 0px;
+            left: 10px;
+
+
+        }
+
+        .ear::before {
+            content: "";
+            width: 50px;
+            height: 50px;
+            background: rgb(0, 0, 0);
+            border-radius: 50%;
+            position: absolute;
+            left: 220px;
+        }
+
+        .ear-inside {
+            width: 30px;
+            height: 30px;
+            background: rgb(255, 255, 255);
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            left: 25px;
+
+        }
+
+        .ear-inside::before {
+            content: "";
+            width: 30px;
+            height: 30px;
+            background: rgb(255, 255, 255);
+            border-radius: 50%;
+            position: absolute;
+            left: 220px;
+        }
+
+        .eyebrow {
+            width: 50px;
+            height: 50px;
+            background: rgb(255, 255, 255);
+            border-radius: 50%;
+            position: absolute;
+            top: 10%;
+            left: 20%;
+        }
+
+        .eyebrow2 {
+            width: 50px;
+            height: 50px;
+            background: rgb(0, 0, 0);
+            border-radius: 50%;
+            position: absolute;
+            top: 12%;
+            left: 20%;
+        }
+
+        .eyebrow:before {
+            content: "";
+            width: 50px;
+            height: 50px;
+            background: rgb(255, 255, 255);
+            border-radius: 50%;
+            position: absolute;
+            left: 250%;
+        }
+
+        .eyebrow2::before {
+            content: "";
+            width: 50px;
+            height: 50px;
+            background: rgb(0, 0, 0);
+            border-radius: 50%;
+            position: absolute;
+
+            left: 250%;
+        }
+
+        .eye {
+            width: 60px;
+            height: 60px;
+            background: rgb(255, 255, 255);
+            border-radius: 50%;
+            position: absolute;
+            top: 30%;
+            left: 18%;
+        }
+
+
+        .eye::before {
+            content: "";
+            width: 60px;
+            height: 60px;
+            background: rgb(255, 255, 255);
+            border-radius: 50%;
+            position: absolute;
+            left: 228%;
+        }
+
+        .eye-inside {
+            width: 10px;
+            height: 30px;
+            background: rgb(0, 0, 0);
+            border-radius: 10px;
+            position: absolute;
+            top: 30%;
+            left: 40%;
+        }
+
+        .eye-inside::before {
+            content: "";
+            width: 10px;
+            height: 30px;
+            background: rgb(0, 0, 0);
+            border-radius: 10px;
+            position: absolute;
+            left: 1378%;
+        }
+
+        .nose {
+            width: 150px;
+            height: 100px;
+            background: rgb(255, 255, 255);
+            border-radius: 50px;
+            position: absolute;
+            top: 50%;
+            left: 25%;
+        }
+
+        .nose::before {
+            content: "";
+            width: 30px;
+            height: 20px;
+            background: rgb(0, 0, 0);
+            border-radius: 20px;
+            position: absolute;
+            top: 5%;
+            left: 40%;
+        }
+
+        .nose::after {
+            content: "";
+            width: 140px;
+            height: 40px;
+            background: rgb(0, 0, 0);
+            border-radius: 15px 15px 50% 50%;
+            position: absolute;
+            top: 35%;
+            left: 5%;
+        }
+
+        .cheek {
+            width: 80px;
+            height: 80px;
+            background: rgb(255, 0, 0);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: -5%;
+        }
+
+        .cheek::before {
+            content: "";
+            width: 80px;
+            height: 80px;
+            background: rgb(255, 0, 0);
+            border-radius: 50%;
+            position: absolute;
+            right: -320%;
+        }
+
+        /* 僅創造一個空間 */
+        .font1 {
+            width: 40px;
+            height: 60px;
+            position: absolute;
+            top: -100px;
+        }
+
+        .font1::before {
+            content: "";
+            width: 40px;
+            height: 60px;
+            background: rgb(255, 47, 0);
+            position: absolute;
+            transform: skew(45deg, 0deg);
+        }
+
+        .font1::after {
+            content: "";
+            width: 40px;
+            height: 60px;
+            background: rgb(0, 0, 0);
+            position: absolute;
+            bottom: 60px;
+            transform: skew(-45deg, 0deg);
+        }
+
+        .font2 {
+            width: 40px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            top: -160px;
+            right: 0px;
+        }
+
+        .font2::before {
+            content: "";
+            width: 100px;
+            height: 15px;
+            background: rgb(0, 0, 0);
+            position: absolute;
+            top: 20%;
+            left: 0%;
+            transform: translate(-30%, 0%);
+        }
+
+        .font2::after {
+            content: "";
+            width: 100px;
+            height: 15px;
+            background: rgb(0, 0, 0);
+            position: absolute;
+            top: 50%;
+            left: 0%;
+            transform: translate(-30%, 0%);
+            z-index: 2;
+        }
+
+        .font3 {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: red;
+            position: absolute;
+            top: -90px;
+            right: 0px;
+        }
+
+        .font3::before {
+            content: "";
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: rgb(255, 255, 255);
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+
+        .font3::after {
+            content: "";
+            width: 80px;
+            height: 15px;
+
+            background: rgb(252, 0, 0);
+            position: absolute;
+            top: 25px;
+            left: 50px;
+            transform: rotate(45deg);
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="face">
+        <div class="ear"></div>
+        <div class="ear-inside"></div>
+        <div class="eyebrow"></div>
+        <div class="eyebrow2"></div>
+        <div class="eye">
+            <div class="eye-inside"></div>
+        </div>
+        <div class="nose"></div>
+        <div class="cheek"></div>
+        <div class="font1"></div>
+        <div class="font2"></div>
+        <div class="font3"></div>
+    </div>
+
+</body>
+
+</html>
